@@ -1,0 +1,96 @@
+@mixin button-base {
+  outline: transparent;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  padding: 3px 10px;
+  background-color: #fff;
+  min-width: 80px;
+  height: 32px;
+  user-select: none;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:disabled:active {
+    transform: none;
+  }
+}
+
+
+
+@mixin button-primary {
+  border: 1px solid rgb(0, 120, 212);
+  background: rgb(0, 120, 212);
+  color: rgb(255, 255, 255);
+
+  &:hover {
+    background-color: rgb(16, 110, 190);
+    border: 1px solid rgb(16, 110, 190);
+    color: rgb(255, 255, 255);
+  }
+
+  &:active {
+    background-color: rgb(0, 90, 158);
+    border: 1px solid rgb(0, 90, 158);
+    color: rgb(255, 255, 255);
+  }
+
+  &:disabled {
+    color: rgb(210, 208, 206);
+  }
+}
+
+@mixin button-standard {
+  border: 1px solid rgb(138, 136, 134);
+  background: rgb(255, 255, 255);
+  color: rgb(50, 49, 48);
+
+  &:hover {
+    background-color: rgb(243, 242, 241);
+    color: rgb(32, 31, 30);
+  }
+
+  &:active {
+    background-color: rgb(237, 235, 233);
+    color: rgb(32, 31, 30);
+  }
+
+  &:disabled {
+    color: rgb(161, 159, 157);
+  }
+}
+// pointer-events:none
+// sass内置lighten()
+$prefix-cls: toy-ui-btn;
+
+.#{$prefix-cls} {
+  &-base {
+    @include button-base;
+
+    &:active {
+      transform: scale(0.94);
+    }
+  }
+
+  &-primary {
+    @include button-primary;
+  }
+
+  &-standard {
+    @include button-standard;
+  }
+
+  &-small {
+    min-width: initial;
+    height: 26px;
+    padding: 0 6px;
+  }
+}

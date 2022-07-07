@@ -1,0 +1,47 @@
+$prefix-cls: toy-ui-wrapper;
+
+.#{$prefix-cls} {
+  position: relative;
+
+  & > svg,
+  & > canvas {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    z-index: 0;
+  }
+
+  &-child,
+  &-popover {
+    position: relative;
+    z-index: $z-10;
+  }
+
+  &-right {
+    & > svg,
+    & > canvas {
+      left: -5px;
+    }
+  }
+
+  &-bottom {
+    & > svg,
+    & > canvas {
+      top: -5px;
+    }
+  }
+
+  &-popover-wrap {
+    z-index: $z-60;
+  }
+
+  &-close {
+    cursor: pointer;
+    z-index: $z-70;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 10px;
+    top: 10px;
+  }
+}

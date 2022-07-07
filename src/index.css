@@ -1,0 +1,39 @@
+/* Global CSS Variables */
+
+html {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fafafa;
+}
+
+body {
+    margin: 0;
+    height: inherit;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: #333;
+    background-color: #fafafa;
+    overflow: hidden;
+}
+
+#root {
+    height: inherit;
+
+    /* Global Size Standards */
+    --mobile: 600px;
+    --small: 768px;
+    --medium: 1024px;
+    --large: 1440px;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border-width: 0;
+}

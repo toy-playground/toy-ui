@@ -1,0 +1,21 @@
+@font-face {
+  font-family: Stanberry;
+  src: url('./Stanberry.ttf');
+}
+
+[class^='toy-ui-'],
+[class='toy-ui'] {
+  box-sizing: border-box;
+  font-family: Stanberry;
+}
+
+// sass Partials用法
+@import './themes';
+
+@import './utils';
+
+@import './core';
+
+@import '../button/style';
+
+@import '../roughWrap';
